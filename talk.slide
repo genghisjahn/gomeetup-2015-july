@@ -13,7 +13,7 @@ What is this?
 
 First a little history
 
-.image history image
+image history image
 
 
 * We had big blog servers
@@ -71,25 +71,25 @@ Let's put the virtual servers in the cloud!
 
 Linode, Digital Ocean, GoGrid, Azure, EC2!
 
-*Are we done now?
+* Are we done now?
 
 Image William Wallace
 I'm not finished!
 
-*Why virtualize the entire OS?
+* Why virtualize the entire OS?
 
 Image Docker!
 
 Let's just put the binaries in containers!
-(For loser companies that can't afford cloud servers)
+For loser companies that can't afford cloud servers
 
-*Is that it?
+* Is that it?
 
 image alice rabbit hole
 
 How deep does the rabbit hole go?
 
-*Boo!  Give us the Matrix!
+* Boooo!  Give us the Matrix!
 
 image matrix red pill
 
@@ -98,13 +98,13 @@ image matrix red pill
 Most of the time I just need the code to do it's thing.
 
 I don't need a physical server
-...or a virtual server
-...or a cloud server
-...or a even a container
 
-...just the binary, running only when I need it to.
+Or a virtual server
+Or a cloud server
+Or a even a container
+Just the binary, running only when I need it to.
 
-*Which brings us to AWS Lambda
+* Which brings us to AWS Lambda
 (link http://aws.amazon.com/lambda/)
 
 "In computer programming, an anonymous function (also function literal or lambda abstraction) is a function definition that is not bound to an identifier. Anonymous functions are often:[1]
@@ -113,21 +113,26 @@ used for constructing the result of a higher-order function that needs to return
 
 https://en.wikipedia.org/wiki/Anonymous_function
 
-*Demo time
 
 We're going to make use of three services:
 
-*A
+* A
 
 We're going to write to an AWS Kinesis Stream.
 
-*2
+* 2
 
 That stream is going to push data to two AWS Lambda endpoints
 
-*D
+* D
 
 The lambda endpoints will write output to an S3 bucket.
+
+* Demo time
+
+image robot fall
+
+
 
 
 
