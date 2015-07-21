@@ -29,11 +29,18 @@ More servers in less space!
 
 Rack Image
 
+(Why do we need more than one server?)
+
+* Oh...
+
+image burning server
 
 
-* Wait!  If we put them all in one place, we can have a data center!
+* Wait!
 
-Economy of power, network cables & air conditioning.
+If we put them all in one place, we can have a data center!
+
+Economy of power, network cables & air conditioning (& fire supression)
 
 More servers & cables in less space.
 
@@ -93,7 +100,7 @@ How deep does the rabbit hole go?
 
 image matrix red pill
 
-*Why have containers?
+* Why have containers?
 
 Most of the time I just need the code to do it's thing.
 
@@ -104,7 +111,7 @@ Or a cloud server
 Or a even a container
 Just the binary, running only when I need it to.
 
-* Which brings us to AWS Lambda
+* Lambda Functions
 (link http://aws.amazon.com/lambda/)
 
 "In computer programming, an anonymous function (also function literal or lambda abstraction) is a function definition that is not bound to an identifier. Anonymous functions are often:[1]
@@ -113,20 +120,31 @@ used for constructing the result of a higher-order function that needs to return
 
 https://en.wikipedia.org/wiki/Anonymous_function
 
+* AWS Lambda
 
-We're going to make use of three services:
+AWS Lambda is a compute service that runs your code in response to events and automatically manages the compute resources for you, making it easy to build applications that respond quickly to new information
+http://aws.amazon.com/lambda/
 
-* A
+* What can I put on Lambda?
+
+"AWS Lambda supports code written in Node.js (JavaScript) and Java (Java 8 compatible). Your code can include existing libraries, even native ones. Lambda functions can easily launch processes using languages supported by Amazon Linux, including Bash, Python, and Ruby."
+http://aws.amazon.com/lambda/faqs/
+
+* Isn't this the Philly Golang Meetup?
+
+This Post: AWS Lambda Functions in Go
+http://blog.0x82.com/2014/11/24/aws-lambda-functions-in-go/
+
+You can load any static binary that will run on Linux in Lambda.  And then call it from node.js
+
+* Three services:
+
 
 We're going to write to an AWS Kinesis Stream.
 
-* 2
+That stream is going to push data to two AWS Lambda endpoints.
 
-That stream is going to push data to two AWS Lambda endpoints
-
-* D
-
-The lambda endpoints will write output to an S3 bucket.
+The Lambda endpoints will write output to an S3 bucket.
 
 * Demo time
 
