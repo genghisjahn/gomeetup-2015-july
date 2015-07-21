@@ -1,0 +1,183 @@
+Hello, Gophers
+Philly GoMeetup
+21 Jul 2015
+
+Jon Wear
+DramaFever.com
+@genghisjahn
+
+
+* Golang in AWS Lambda!
+
+What is this?
+
+First a little history
+
+.image images/history.jpg
+
+
+* We had big box servers
+
+.image images/Compaq_Proliant_2500.JPG
+
+
+
+* Hey!  They stack better if you change the shape!
+
+Economy of Size!
+More servers in less space!
+
+.image images/rack_server.jpeg
+
+(Why do we need more than one server?)
+
+* Oh...
+
+.image images/buring-server.jpg
+
+
+* Wait!
+
+If we put them all in one place, we can have a data center!
+
+Economy of power, network cables & air conditioning (& fire supression)
+
+More servers & cables in less space.
+
+.image images/server_room.jpg
+
+(For companies that don't have enough closets at the office)
+
+* What a waste
+
+But, most of these clock cycles are wasted.
+
+.image images/waste.jpeg
+
+* Wait a second...
+
+.image images/betteridea.jpeg
+
+Let's put more servers...call 'em "virtual servers"...in each physical server!
+
+
+* Crazy Efficiency
+
+.image images/efficiency.png
+
+.image images/vmware.jpg
+
+(For companies that don't have enough hardware)
+
+* Wait!
+
+I have an _even_better_ idea
+
+.image images/ideapointingup.jpg
+
+* The cloud!
+
+.image images/cloud2.jpg
+
+
+Let's put the virtual servers in the cloud!
+
+Linode, Digital Ocean, GoGrid, Azure, EC2!
+
+(For companies that can't afford their own data center)
+
+* Are we done now?
+
+I'm not finished!
+
+.image images/williamwallace.jpg
+
+* Why virtualize the entire OS?
+
+.image images/docker.png
+
+Let's just put the binaries in containers!
+
+Now we can share all sorts of OS related stuff between binaries!
+
+(For loser companies that can't afford cloud servers)
+
+* Is that it?
+
+.image images/rabbithole.jpg
+
+How deep does the rabbit hole go?
+
+* Or, if you prefer...
+
+.image images/redpill.jpg
+
+* Why have containers?
+
+Most of the time I just need the code to do it's thing.
+
+I don't need a physical server
+
+Or a virtual server
+Or a cloud server
+Or a even a container
+
+Just the binary, running only when I need it to.
+
+Which brings us to...
+
+* Lambda Functions
+
+"In computer programming, an anonymous function (also function literal or lambda abstraction) is a function definition that is not bound to an identifier. Anonymous functions are often, arguments being passed to higher-order functions, or
+used for constructing the result of a higher-order function that needs to return a function."
+
+.link https://en.wikipedia.org/wiki/Anonymous_function
+
+* AWS Lambda
+
+AWS Lambda is a compute service that runs your code in response to events and automatically manages the compute resources for you, making it easy to build applications that respond quickly to new information
+
+.link http://aws.amazon.com/lambda/
+
+* What can I put on Lambda?
+
+"AWS Lambda supports code written in Node.js (JavaScript) and Java (Java 8 compatible). Your code can include existing libraries, even native ones. Lambda functions can easily launch processes using languages supported by Amazon Linux, including Bash, Python, and Ruby."
+
+.link http://aws.amazon.com/lambda/faqs/
+
+* Isn't this the Philly Golang Meetup?
+
+This Post: AWS Lambda Functions in Go
+
+.link http://blog.0x82.com/2014/11/24/aws-lambda-functions-in-go/
+
+You can load any static binary that will run on Linux in Lambda.  And then call it from node.js
+
+
+
+* In addition to the go code...
+
+We'll use three AWS services.
+
+* Kinesis
+
+.image /images/kinesis2.png
+
+Amazon Kinesis is a fully managed streaming data service. You can continuously add various types of data such as clickstreams, application logs, and social media to an Amazon Kinesis stream from hundreds of thousands of sources. Within seconds, the data will be available for your Amazon Kinesis Applications to read and process from the stream.
+
+* AWS Lambda
+
+.image images/lambda.png
+That stream is going to push data to two AWS Lambda endpoints.
+
+* S3
+
+.image /images/s3.png
+
+Amazon Simple Storage Service (Amazon S3), provides developers and IT teams with secure, durable, highly-scalable object storage. Amazon S3 is easy to use, with a simple web services interface to store and retrieve any amount of data from anywhere on the web. With Amazon S3, you pay only for the storage you actually use. There is no minimum fee and no setup cost.
+
+* Demo time
+
+.image /images/robotfall2.gif
+
+Now for well rehearsed demo!
