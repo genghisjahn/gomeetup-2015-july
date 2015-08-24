@@ -21,7 +21,7 @@ No, it's not
 .image images/history.jpg
 
 
-* The old days (late 1990s)
+* The old days (early - mid 1990s)
 
 .image images/Compaq_Proliant_2500.JPG
 
@@ -32,7 +32,7 @@ No, it's not
 Economy of Size!
 More servers in less space!
 
-.image images/rack_server.jpeg
+.image images/google_first.jpg
 
 (Why do we need more than one server?)
 
@@ -47,14 +47,11 @@ If we put them all in one place, we can have a data center!
 
 Economy of power, network cables & air conditioning (& fire supression)
 
-More servers & cables in less space.
-
 .image images/server_room.jpg
-
 
 * What a waste
 
-But, most of these clock cycles are wasted.
+Most of these clock cycles are wasted.
 
 .image images/waste.jpeg
 
@@ -93,7 +90,7 @@ Linode, Digital Ocean, GoGrid, Azure, EC2!
 
 Why virtualize the entire OS?
 
-.image images/docker.png
+.image images/docker-vm-container.png
 
 Let's just put the binaries in containers!
 
@@ -118,14 +115,6 @@ Or a even a container
 
 Just the binary, running only when I need it to.
 
-Which brings us to...
-
-* Lambda Functions
-
-"In computer programming, an anonymous function (also function literal or lambda abstraction) is a function definition that is not bound to an identifier. Anonymous functions are often, arguments being passed to higher-order functions, or
-used for constructing the result of a higher-order function that needs to return a function."
-
-.link https://en.wikipedia.org/wiki/Anonymous_function
 
 * AWS Lambda
 
@@ -168,9 +157,9 @@ With Lambda & Kinesis, we could do all that for less than $50/month.
 
 * We could look for ways to apply this
 
-We could have APIS that don't run on servers
-While they aren't needed, they cost nothing
-When we need a whole bunch of it, lambda ramps up a lot of 'em,
+We could have APIs that don't run on servers or containers
+While they aren't in use, they cost nothing
+When we need a whole bunch of capacity, lambda ramps up a lot of 'em,
 No server patching or rebooting
 Experiments get easier
 
